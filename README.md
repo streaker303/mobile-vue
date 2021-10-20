@@ -1,6 +1,6 @@
 # cli4+mobile+postcss-pxtorem+vw++eslint+vant适配750
 ### 使用时拉完项目->cnpm i ->直接跑就行
-#### 下面是适配方案和步骤
+#### 下面是适配方案和步骤，可结合vant-demo来看
 #### 1. 安装 postcss-pxtorem 和 lib-flexible
 - `postcss-pxtorem`  ，注意要是这个插件不是px2rem。
 ```
@@ -65,5 +65,4 @@ document.documentElement.style.fontSize = 10 + 'vw';
 
 ```
 #### 6. TODO：利用sass函数，待补充
-
 
