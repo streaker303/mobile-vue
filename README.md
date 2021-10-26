@@ -37,23 +37,23 @@ import 'lib-flexible/flexible.js'
 #### 4. 替代手淘方案，index.html 中加js函数
 ```angular2html
 <script>
-  (function (doc, win) {
-  		var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-        var clientWidth = docEl.clientWidth;
-        if (!clientWidth) return;
-        if(clientWidth>=750){
-          docEl.style.fontSize = '75px';
-        }else{
-          docEl.style.fontSize = 75 * (clientWidth / 750) + 'px';
-        }
-      };
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth
+                if (!clientWidth) return
+                if (clientWidth >= 750) {
+                    docEl.style.fontSize = '75px'
+                } else {
+                    docEl.style.fontSize = 75 * (clientWidth / 750) + 'px'
+                }
+            }
 
-      if (!doc.addEventListener) return;
-      win.addEventListener(resizeEvt, recalc, false);
-      doc.addEventListener('DOMContentLoaded', recalc, false);
-})(document, window);
+        if (!doc.addEventListener) return
+        win.addEventListener(resizeEvt, recalc, false)
+        doc.addEventListener('DOMContentLoaded', recalc, false)
+    })(document, window)
 </script>
 
 ```
