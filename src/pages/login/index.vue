@@ -1,5 +1,7 @@
 <template>
     <div class="wrapper">
+        <div class="top border-bottom">我是top</div>
+        <div class="top2">我是下面div</div>
         <van-button type="primary">默认按钮</van-button>
         <van-search value="1231" placeholder="请输入搜索关键词"/>
         <van-area title="标题" :area-list="areaList" />
@@ -49,6 +51,11 @@ export default {
     background: red;
     width: 375px;
     height: 100px;
+}
+
+.top2 {
+    border-bottom: 1px solid red;
+    font-size: 16PX; /*大写PX，忽略属性*/
 }
 
 </style>

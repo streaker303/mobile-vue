@@ -493,4 +493,29 @@ export const uuid = function(len, radix) {
     return uuid.join('');
 }
 
+export const curBrowser = () => {
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+    var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+    var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+    if(isIE) {
+        return 'IE';
+    } else if(isEdge) {
+        return 'edge';//edge
+    } else if(isIE11) {
+        return 'IE';
+    }else{
+        return -1;//不是ie浏览器
+    }
+
+}
+
+export const isMobile =  () => {
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        return true // 手机端
+    } else {
+        return false // alert('PC端')
+    }
+}
+
 

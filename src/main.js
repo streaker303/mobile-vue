@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router/index.js'
 import Element from 'element-ui'
 import './assets/css/base.css'
+import './assets/css/border.scss'
 import './assets/css/element-variables.scss'
 import 'element-ui/lib/theme-chalk/index.css'
 import VNSUI from 'vns-ui' // 引入组件库
