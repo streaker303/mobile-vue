@@ -8,8 +8,6 @@ import './assets/css/base.css'
 import './assets/css/border.scss'
 import './assets/css/element-variables.scss'
 import 'element-ui/lib/theme-chalk/index.css'
-import VNSUI from 'vns-ui' // 引入组件库
-import 'vns-ui/packages/theme-default/lib/index.css'
 
 import store from './store/index.js'
 import Debounce from './assets/js/utils.js'
@@ -28,7 +26,6 @@ import filters from './assets/js/filters.js'
 // 指令统一处理加载
 import directives from './assets/js/directives.js' // 引入样式库
 
-Vue.use(VNSUI)
 Vue.use(Vant)
 
 Vue.use(Element)

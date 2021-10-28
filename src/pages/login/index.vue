@@ -38,10 +38,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .wrapper {
     width: 750px;
-    height: 100%;
     border: 2px solid green;
     box-sizing: border-box;
     margin: 0 auto;
@@ -57,5 +56,10 @@ export default {
     border-bottom: 1px solid red;
     font-size: 16PX; /*大写PX，忽略属性*/
 }
+/*.box-vw {
+    height: 200px;
+    width: vw(300);
+    background: #01e9ff;
+}*/
 
 </style>

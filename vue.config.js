@@ -99,7 +99,15 @@ module.exports = {
     },
 
     css: {
-        sourceMap: process.env.NODE_ENV !== 'production'
+        sourceMap: process.env.NODE_ENV !== 'production',
+        loaderOptions: {
+            scss: {
+                // @/ 表示 src/ 的别名, 如要有多个scss可以在 ; 后面在 @import "@/其他.scss";
+                // 注意：在 sass-loader v7 中，这个选项名是 "data"
+                prependData: `@import "@/global.scss";`
+            }
+        }
+
     },
     chainWebpack: config => {
         config.resolve.alias

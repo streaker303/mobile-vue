@@ -1,0 +1,6 @@
+$color: #2656ec;
+
+@function vw($px) {
+
+    @return ($px / 750) * 100vw;
+}
