@@ -32,7 +32,7 @@ export default {
         }
     },
     mounted() {
-
+        console.log(121212)
     },
     methods: {}
 }

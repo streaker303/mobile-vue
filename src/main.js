@@ -25,7 +25,9 @@ import filters from './assets/js/filters.js'
 
 // 指令统一处理加载
 import directives from './assets/js/directives.js' // 引入样式库
+import Vconsole from 'vconsole'
 
+Vue.use(new Vconsole())
 Vue.use(Vant)
 
 Vue.use(Element)
